@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The Xperia Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/xosp_settings_blur_cat">
+
+    <SwitchPreference
+       android:key="hook_system_ui_blurred_status_bar_expanded_enabled_pref"
+       android:title="@string/hook_system_ui_blurred_status_bar_expanded_enabled_pref"
+       android:summary="@string/hook_system_ui_blurred_status_bar_expanded_enabled_pref_summary"
+       android:defaultValue="false" />
+
+    <com.android.settings.xosp.SeekBarPreference
+       android:key="statusbar_blur_scale"
+       android:title="@string/hook_system_ui_blurred_scale"
+       android:dependency="hook_system_ui_blurred_status_bar_expanded_enabled_pref"
+       android:persistent="false"
+       android:dialogTitle="@string/hook_system_ui_blurred_scale"
+       android:max="25"
+       settings:minSeekBar="1"
+       android:defaultValue="10" />
+
+    <com.android.settings.xosp.SeekBarPreference
+       android:key="statusbar_blur_radius"
+       android:title="@string/hook_system_ui_blurred_radius"
+       android:dependency="hook_system_ui_blurred_status_bar_expanded_enabled_pref"
+       android:persistent="false"
+       android:dialogTitle="@string/hook_system_ui_blurred_radius"
+       android:max="25"
+       settings:minSeekBar="1"
+       android:defaultValue="5" />
+
+    <SwitchPreference
+       android:key="hook_system_ui_translucent_notifications_pref"
+       android:title="@string/hook_system_ui_translucent_notifications_pref"
+       android:summary="@string/hook_system_ui_translucent_notifications_pref_summary"
+       android:defaultValue="false" />
+
+    <SwitchPreference
+       android:key="hook_system_ui_translucent_header_pref"
+       android:title="@string/hook_system_ui_translucent_header_pref"
+       android:summary="@string/hook_system_ui_translucent_header_pref_summary"
+       android:defaultValue="false" />
+
+    <SwitchPreference
+       android:key="hook_system_ui_translucent_quick_settings_pref"
+       android:title="@string/hook_system_ui_translucent_quick_settings_pref"
+       android:summary="@string/hook_system_ui_translucent_quick_settings_pref_summary"
+       android:defaultValue="false" />
+
+</PreferenceScreen>
