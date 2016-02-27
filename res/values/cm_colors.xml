@@ -34,9 +34,7 @@ limitations under the License.
     <color name="text_color_black">@android:color/black</color>
     <color name="text_color_darker_gray">@android:color/darker_gray</color>
     <color name="text_color_holo_blue_light">@android:color/holo_blue_light</color>
-    <color name="text_color_secondary_text_material_light">
-        @*android:color/secondary_text_material_light
-    </color>
+    <color name="text_color_secondary_text_material_light"> @*android:color/secondary_text_material_light</color>
     <color name="text_color_translucent_white">#B3FFFFFF</color>
     <color name="text_color_white">@android:color/white</color>
     <!-- Dashboard background color -->
@@ -84,4 +82,13 @@ limitations under the License.
 
     <!-- Action bar icons -->
     <color name="action_bar_icon_tint">@android:color/white</color>
+
+
+
+    <!-- Filter Spinner Text Color -->
+    <color name="filter_spinner_text_color">@color/text_color_white</color>
+
+    <!-- App Name Text Color -->
+    <color name="app_name_text_color">@color/text_color_white</color>
+
 </resources>

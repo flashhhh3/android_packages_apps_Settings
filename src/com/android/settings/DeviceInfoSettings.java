@@ -87,8 +87,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MOD_VERSION = "mod_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_MOD_API_LEVEL = "mod_api_level";
-    private static final String KEY_XOSP_REVISION="xosp_revision";
-    private static final String KEY_XOSP_RELEASE="xosp_release";
+    private static final String KEY_XOSP_REVISION= "xosp_revision";
+    private static final String KEY_XOSP_RELEASE= "xosp_release";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -185,9 +185,31 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
          */
         final Activity act = getActivity();
         // Remove regulatory information if none present or config_show_regulatory_info is disabled
+
+        // These are contained by the root preference screen
+        PreferenceGroup parentPreference = getPreferenceScreen();
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
+                    KEY_SYSTEM_UPDATE_SETTINGS,
+                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+            /* Make sure the activity is provided by who we want... */
+            if (findPreference(KEY_SYSTEM_UPDATE_SETTINGS) != null)
+                removePreferenceIfPackageNotInstalled(findPreference(KEY_SYSTEM_UPDATE_SETTINGS));
+        } else {
+            // Remove for secondary users
+            removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
+        }
+
+        // Read platform settings for additional system update setting
+        removePreferenceIfBoolFalse(KEY_UPDATE_SETTING,
+                R.bool.config_additional_system_update_setting_enable);
+
+        // Remove manual entry if none present.
+        removePreferenceIfBoolFalse(KEY_MANUAL, R.bool.config_show_manual);
+
+        // Remove regulatory information if none present
         final Intent intent = new Intent(Settings.ACTION_SHOW_REGULATORY_INFO);
-        if (getPackageManager().queryIntentActivities(intent, 0).isEmpty()
-                || !getResources().getBoolean(R.bool.config_show_regulatory_info)) {
+        if (getPackageManager().queryIntentActivities(intent, 0).isEmpty()) {
             Preference pref = findPreference(KEY_REGULATORY_INFO);
             if (pref != null) {
                 getPreferenceScreen().removePreference(pref);
