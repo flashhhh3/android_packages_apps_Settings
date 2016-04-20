@@ -1336,7 +1336,7 @@ public class SettingsActivity extends Activity
                         removeTile = true;
                     }
                 } else if (id == R.id.xospapps) {
-                	if(!Utils.isPackageInstalled(this, XOSPAPPS, true)) {
+                	if(Utils.isPackageInstalled(this, XOSPAPPS, false)) {
                 		removeTile = true;
                 	}
                 	else 
