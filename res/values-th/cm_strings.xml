@@ -135,6 +135,19 @@
   <string name="wifi_setting_countrycode_title">รหัสภูมิภาค Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_summary">ระบุรหัสภูมิภาคสำหรับ Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_error">มีปัญหาขณะตั้งรหัสภูมิภาค</string>
+  <string name="wifi_countrycode_us">สหรัฐอเมริกา</string>
+  <string name="wifi_countrycode_ca">แคนาดา ไต้หวัน</string>
+  <string name="wifi_countrycode_de">เยอรมันนี</string>
+  <string name="wifi_countrycode_gb">ยุโรป</string>
+  <string name="wifi_countrycode_jp">ญี่ปุ่น, รัสเซีย</string>
+  <string name="wifi_countrycode_au">ออสเตรเลีย</string>
+  <string name="wifi_countrycode_cn">จีน</string>
+  <string name="wifi_countrycode_kr">เกาหลี</string>
+  <string name="wifi_countrycode_tr">แอฟริกาใต้ ตุรกี</string>
+  <string name="wifi_countrycode_sg">อิสราเอล สิงคโปร์</string>
+  <string name="wifi_countrycode_br">บราซิล</string>
+  <string name="wifi_countrycode_in">อินเดีย</string>
+  <!-- Profiles -->
   <string name="profile_menu_delete_title">ลบ</string>
   <string name="profile_action_none">ไม่บันทึกการเปลี่ยนแปลง</string>
   <string name="profile_action_system">ค่าเริ่มต้นระบบ</string>
@@ -438,6 +451,10 @@
   <string name="saturation_str">ความอิ่มตัว: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">ความเข้มจาง: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">ความเข้มข้น: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">มาตราฐาน</string>
+  <string name="screen_color_vivid">สดใส</string>
+  <string name="screen_color_custom">กำหนดเอง</string>
+  <!-- LiveDisplay -->
   <string name="live_display_summary">ปรับหน้าความสว่างหน้าจอตามเวลาและแสงโดยรอบเพื่อทำให้อ่านได้ง่ายขึ้นและลดอาการปวดตา</string>
   <string name="live_display_mode">รูปแบบการแสดงผล</string>
   <string name="live_display_color_temperature_title">อุณหภูมิสี</string>
@@ -723,4 +740,49 @@
   <string name="interruptions_ignore_while_media_title">ป้องกันการลดเสียง</string>
   <string name="interruptions_ignore_while_media_summary">ไม่ลดเสียงเพลงเมื่อมีการแจ้งเตือนเข้า</string>
   <string name="cmlicense_title">เกี่ยวกับกฎหมาย CyanogenMod</string>
+  <!-- Menu label for reset the battery stats -->
+  <string name="menu_stats_reset">ตั้งค่าสถิติใหม่</string>
+  <!-- Reset stats confirmation dialog's message -->
+  <string name="reset_stats_msg">จะมีการตั้งค่าสถิติประวัติแบตเตอร์รี่ใหม่</string>
+  <!-- Dock battery not present message -->
+  <string name="dock_battery_not_present">ไม่มีแท่นชาร์จแบตเตอร์รี่</string>
+  <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging on Dock AC. -->
+  <string name="battery_info_status_charging_dock_ac">การชาร์จบนแท่น AC</string>
+  <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
+  <string name="battery_info_status_charging_dock_usb">การชาร์จผ่านแท่น USB</string>
+  <string name="restrict_app_wlan_title">ปิดการใช้ Wi\u2011Fi ของแอป</string>
+  <string name="restrict_app_wlan_summary">ป้องกันแอปจากการเชื่อมต่อข้อมูล Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">ปิดการใช้งานทางโทรศัพท์ของแอป</string>
+  <string name="restrict_app_cellular_summary">ป้องกันแอปจากการใช้การเชื่อมต่อข้อมูลทางโทรศัพท์</string>
+  <string name="privacy_guard_internet_category">อินเทอร์เน็ต</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">สภาพอากาศ</string>
+  <string name="weather_settings_no_services_prompt">ไม่มีผู้ให้บริการข้อมูลสภาพอากาศติดตั้งอยู่</string>
+  <string name="weather_settings_button">ตั้งค่าผู้ให้บริการ</string>
+  <string name="weather_settings_activity_not_found">ไม่สามารถเปิดการตั้งค่าของผู้ให้บริการนี้ได้</string>
+  <string name="weather_settings_add_weather_provider">เพิ่มผู้ให้บริการรายงานสภาพอากาศ</string>
+  <string name="weather_settings_general_settings_title">ทั่วไป</string>
+  <string name="weather_settings_providers_title">ผู้ให้บริการ</string>
+  <string name="weather_settings_temp_units_title">หน่วยอุณหภูมิ</string>
+  <string name="weather_settings_temp_celsius">เซลเซียส</string>
+  <string name="weather_settings_temp_fahrenheit">ฟาเรนไฮต์</string>
+  <string name="weather_settings_keyword">สภาพอากาศ</string>
+  <string name="background_data_access">เข้าถึงข้อมูลพื้นหลัง</string>
+  <string name="allow_background_both">ผ่านข้อมูลโทรศัพท์มือถือ &amp; Wi\u2011Fi</string>
+  <string name="allow_background_wlan">เฉพาะเมื่อใช้ Wi\u2011Fi เท่านั้น</string>
+  <string name="allow_background_none">ไม่เข้าถึง</string>
+  <string name="mobile_data_alert">แจ้งเตือนข้อมูลเครือข่าย</string>
+  <string name="mobile_data_alert_summary">แจ้งเตือนเมื่อแอปใช้ข้อมูลเครือข่ายเป็นจำนวนมาก</string>
+  <string name="data_usage_menu_enable_data_alerts">เปิดใช้งานแจ้งเตือนปริมาณข้อมูล</string>
+  <string name="data_usage_menu_disable_data_alerts">ปิดการใช้งานแจ้งเตือนปริมาณข้อมูล</string>
+  <string name="data_usage_menu_reset_stats">ล้างสถิติการใช้งานเครือข่าย</string>
+  <string name="reset_data_stats_msg">นี่จะล้างข้อมูลที่ถูกบันทึกไส้ตั้งแต่อดีตจนถึงปัจจุบัน</string>
+  <string name="reset_stats_confirm">ยืนยัน</string>
+  <string name="restrict_cellular_access_title">จำกัดการเข้าถึงข้อมูลโทรศัพท์มือถือ</string>
+  <string name="restrict_cellular_access_summary">ปิดใช้งานการเข้าถึงข้อมูลบนเครือข่ายมือถือ</string>
+  <string name="restrict_cellular_access_dialog_title">ต้องการจำกัดการเข้าถึงข้อมูลโทรศัพท์มือถือหรือไม่?</string>
+  <string name="restrict_cellular_access_dialog_summary">ความสามารถนี้อาจทำใหแอปที่ต้องใช้งานเครือข่ายหยุดทำงานเมื่อมีเพียงเครือข่ายมือถือเท่านั้นที่ใช้งานได้\n\nคุณสามารถตั้งการควบคุมข้อมูลให้เหมาะสมได้จากการตั้งค่าผ่านแอปเหล่านั้น</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">ผู้ให้บริการเครือข่าย</string>
+>>>>>>> 5599680aa5c84f00a0ee148186e66e2476ce6184
 </resources>

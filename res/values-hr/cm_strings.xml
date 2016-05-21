@@ -138,6 +138,19 @@
   <string name="wifi_setting_countrycode_title">Wi‑Fi regija</string>
   <string name="wifi_setting_countrycode_summary">Navedite šifru regije za Wi‑Fi</string>
   <string name="wifi_setting_countrycode_error">Došlo je do problema prilikom postavljanja regionalnog koda.</string>
+  <string name="wifi_countrycode_us">Sjedinjene Američke Države</string>
+  <string name="wifi_countrycode_ca">Kanada, Tajvan</string>
+  <string name="wifi_countrycode_de">Njemačka</string>
+  <string name="wifi_countrycode_gb">Europa</string>
+  <string name="wifi_countrycode_jp">Japan, Rusija</string>
+  <string name="wifi_countrycode_au">Australija</string>
+  <string name="wifi_countrycode_cn">Kina</string>
+  <string name="wifi_countrycode_kr">Koreja</string>
+  <string name="wifi_countrycode_tr">Južna Afrika, Turska</string>
+  <string name="wifi_countrycode_sg">Izrael, Singapur</string>
+  <string name="wifi_countrycode_br">Brazil</string>
+  <string name="wifi_countrycode_in">Indija</string>
+  <!-- Profiles -->
   <string name="profile_menu_delete_title">Obriši</string>
   <string name="profile_action_none">Ostavi nepromijenjeno</string>
   <string name="profile_action_system">Zadana postavka sustava</string>
@@ -500,6 +513,10 @@
   <string name="saturation_str">Zasićenost: <xliff:g id="saturation_value">%1$s </xliff:g></string>
   <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s </xliff:g></string>
   <string name="intensity_str">Intenzitet: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standardno</string>
+  <string name="screen_color_vivid">Živopisno</string>
+  <string name="screen_color_custom">Prilagođeno</string>
+  <!-- LiveDisplay -->
   <string name="live_display_summary">Prilagodi zaslon prema dobu dana i okolini za poboljšanje čitljivosti i smanjenju naprezanja očiju</string>
   <string name="live_display_mode">Način prikaza</string>
   <string name="live_display_color_temperature_title">Temperatura boje</string>
@@ -843,4 +860,32 @@
   <string name="restrict_app_cellular_summary">Spriječi aplikaciju da koristi mobilnu podatkovnu vezu</string>
   <string name="privacy_guard_internet_category">Internet</string>
   <!-- Weather -->
+  <string name="weather_settings_title">Vrijeme</string>
+  <string name="weather_settings_no_services_prompt">Nema instaliranih usluga davatelja vremenske prognoze</string>
+  <string name="weather_settings_button">Postavke davatelja</string>
+  <string name="weather_settings_activity_not_found">Nije moguće otvoriti izbornik postavki ovog davatelja usluga</string>
+  <string name="weather_settings_add_weather_provider">Dodaj pružatelja vremenske prognoze</string>
+  <string name="weather_settings_general_settings_title">Općenito</string>
+  <string name="weather_settings_providers_title">Pružatelji</string>
+  <string name="weather_settings_temp_units_title">Jedinica temperature</string>
+  <string name="weather_settings_temp_celsius">Celzij</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+  <string name="weather_settings_keyword">vrijeme</string>
+  <string name="background_data_access">Pristup pozadinskim podacima</string>
+  <string name="allow_background_both">Preko mobilnih mreža i Wi-Fi-ja</string>
+  <string name="allow_background_wlan">Samo preko Wi-Fi-ja</string>
+  <string name="allow_background_none">Nema pristupa</string>
+  <string name="mobile_data_alert">Podatkovna upozorenja</string>
+  <string name="mobile_data_alert_summary">Obavijesti kada aplikacija koristi značajne količine podataka</string>
+  <string name="data_usage_menu_enable_data_alerts">Omogući upozorenja upotrebe podataka</string>
+  <string name="data_usage_menu_disable_data_alerts">Onemogući upozorenja upotrebe podataka</string>
+  <string name="data_usage_menu_reset_stats">Resetiraj statistike podataka</string>
+  <string name="reset_data_stats_msg">Ovo će izbrisati sve prethodne i tekuće praćenje podataka</string>
+  <string name="reset_stats_confirm">Potvrdi</string>
+  <string name="restrict_cellular_access_title">Ograničenje pristupa mobilnim podacima</string>
+  <string name="restrict_cellular_access_summary">Onemogući pristup podacima na mobilnoj mreži</string>
+  <string name="restrict_cellular_access_dialog_title">Ograničiti pristup mobilnim podacima?</string>
+  <string name="restrict_cellular_access_dialog_summary">Ova značajka može uzrokovati da aplikacija koja je ovisna o pristupu mreži prestane raditi kada je samo mobilna veza dostupna.\n\nPrimjerenije postavke kontrole potrošnje podataka možete naći u aplikaciji.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Mrežni operateri</string>
 </resources>

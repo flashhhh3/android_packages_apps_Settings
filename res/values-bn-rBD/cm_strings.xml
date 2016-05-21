@@ -315,6 +315,11 @@
   <string name="saturation_str">সম্পৃক্তিঃ <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">বৈপরীত্যঃ <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">তীব্রতাঃ <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_custom">পছন্দসই</string>
+  <!-- LiveDisplay -->
+  <!-- Whether to display IME switcher notifcation -->
+  <!-- Heads up -->
+  <!-- Bluetooth settings.  A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
   <string name="bluetooth_accept_all_files">সব ধরনের ফাইল গ্রহণ করুন</string>
   <string name="high_touch_sensitivity_title">উচ্চ স্পর্শ সংবেদনশীলতা</string>
   <string name="high_touch_sensitivity_summary">টাচস্ক্রীন সংবেদনশীলতা বৃদ্ধি করুন যাতে গ্লাভস পরিহিত অবস্থায় ব্যবহার করা যেতে পারে</string>
@@ -400,4 +405,6 @@
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging on Dock AC. -->
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <!-- Weather -->
+  <string name="weather_settings_general_settings_title">সাধারণ</string>
+  <!-- Label for settings shortcut: carrier selection -->
 </resources>

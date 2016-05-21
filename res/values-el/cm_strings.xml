@@ -133,6 +133,19 @@
   <string name="wifi_setting_countrycode_title">Κωδικός περιοχής Wi-Fi</string>
   <string name="wifi_setting_countrycode_summary">Προσδιορίστε τον κωδικό περιοχής για το Wi-Fi</string>
   <string name="wifi_setting_countrycode_error">Πρόβλημα κατά τη ρύθμιση του κωδικού περιοχής.</string>
+  <string name="wifi_countrycode_us">Ηνωμένες Πολιτείες</string>
+  <string name="wifi_countrycode_ca">Καναδάς, Ταϊβάν</string>
+  <string name="wifi_countrycode_de">Γερμανία</string>
+  <string name="wifi_countrycode_gb">Ευρώπη</string>
+  <string name="wifi_countrycode_jp">Ιαπωνία, Ρωσία</string>
+  <string name="wifi_countrycode_au">Αυστραλία</string>
+  <string name="wifi_countrycode_cn">Κίνα</string>
+  <string name="wifi_countrycode_kr">Κορέα</string>
+  <string name="wifi_countrycode_tr">Νότια Αφρική, Τουρκία</string>
+  <string name="wifi_countrycode_sg">Ισραήλ, Σιγκαπούρη</string>
+  <string name="wifi_countrycode_br">Βραζιλία</string>
+  <string name="wifi_countrycode_in">Ινδία</string>
+  <!-- Profiles -->
   <string name="profile_menu_delete_title">Διαγραφή</string>
   <string name="profile_action_none">Να μη γίνει αλλαγή</string>
   <string name="profile_action_system">Προεπιλογή συστήματος</string>
@@ -495,6 +508,10 @@
   <string name="saturation_str">Κορεσμός: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Αντίθεση: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Ένταση: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Κανονικό</string>
+  <string name="screen_color_vivid">Ζωντανό</string>
+  <string name="screen_color_custom">Προσαρμοσμένο</string>
+  <!-- LiveDisplay -->
   <string name="live_display_summary">Βελτιστοποίηση της οθόνης σας με βάση την ώρα της ημέρας και τις συνθήκες περιβάλλοντος για βελτίωση της αναγνωσιμότητας και μείωση της καταπόνησης των ματιών</string>
   <string name="live_display_mode">Λειτουργία οθόνης</string>
   <string name="live_display_color_temperature_title">Θερμοκρασία χρώματος</string>
@@ -836,4 +853,38 @@
   <string name="battery_info_status_charging_dock_ac">Φόρτιση με AC βάσης σύνδεσης</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">Φόρτιση μέσω USB βάσης σύνδεσης</string>
+  <string name="restrict_app_wlan_title">Απενεργοποίηση χρήσης Wi\u2011Fi για την εφαρμογή</string>
+  <string name="restrict_app_wlan_summary">Αποτροπή εφαρμογής από τη χρήση σύνδεσης Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">Απενεργοποίηση χρήσης δεδομένων για την εφαρμογή</string>
+  <string name="restrict_app_cellular_summary">Αποτροπή εφαρμογής από τη χρήση δεδομένων κινητής τηλεφωνίας</string>
+  <string name="privacy_guard_internet_category">Διαδίκτυο</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Καιρός</string>
+  <string name="weather_settings_no_services_prompt">Δεν υπάρχουν εγκατεστημένοι πάροχοι καιρού</string>
+  <string name="weather_settings_button">Ρυθμίσεις παρόχου</string>
+  <string name="weather_settings_activity_not_found">Δεν είναι δυνατό το άνοιγμα του μενού ρυθμίσεων αυτού του παρόχου</string>
+  <string name="weather_settings_add_weather_provider">Προσθήκη παρόχου καιρού</string>
+  <string name="weather_settings_general_settings_title">Γενικά</string>
+  <string name="weather_settings_providers_title">Πάροχοι</string>
+  <string name="weather_settings_temp_units_title">Μονάδα θερμοκρασίας</string>
+  <string name="weather_settings_temp_celsius">Κελσίου</string>
+  <string name="weather_settings_temp_fahrenheit">Φαρενάιτ</string>
+  <string name="weather_settings_keyword">καιρός</string>
+  <string name="background_data_access">Πρόσβαση δεδομένων στο παρασκήνιο</string>
+  <string name="allow_background_both">Μέσω δεδομένων κινητής τηλεφωνίας &amp; Wi\u2011Fi</string>
+  <string name="allow_background_wlan">Μόνο μέσω Wi\u2011Fi</string>
+  <string name="allow_background_none">Χωρίς πρόσβαση</string>
+  <string name="mobile_data_alert">Προειδοποίηση δεδομένων κινητής τηλεφωνίας</string>
+  <string name="mobile_data_alert_summary">Ειδοποίηση όταν η εφαρμογή χρησιμοποιεί ένα σημαντικό ποσό δεδομένων</string>
+  <string name="data_usage_menu_enable_data_alerts">Ενεργοποίηση των προειδοποιήσεων χρήσης δεδομένων</string>
+  <string name="data_usage_menu_disable_data_alerts">Απενεργοποίηση των προειδοποιήσεων χρήσης δεδομένων</string>
+  <string name="data_usage_menu_reset_stats">Επαναφορά στατιστικών δεδομένων</string>
+  <string name="reset_data_stats_msg">Αυτό θα διαγράψει όλες τις καταγεγραμμένες πληροφορίες χρήσης δεδομένων στη συσκευή σας</string>
+  <string name="reset_stats_confirm">Επιβεβαίωση</string>
+  <string name="restrict_cellular_access_title">Περιορισμός πρόσβασης δεδομένων</string>
+  <string name="restrict_cellular_access_summary">Απενεργοποίηση της πρόσβασης δεδομένων σε δίκτυα κινητής τηλεφωνίας</string>
+  <string name="restrict_cellular_access_dialog_title">Περιορισμός πρόσβασης δεδομένων;</string>
+  <string name="restrict_cellular_access_dialog_summary">Αυτή η δυνατότητα μπορεί να προκαλέσει μια εφαρμογή που εξαρτάται από την πρόσβαση στο δίκτυο να σταματήσει να λειτουργεί όταν υπάρχουν μόνο δίκτυα κινητής τηλεφωνίας διαθέσιμα.\n\nΜπορείτε να βρείτε πιο κατάλληλους ελέγχους της χρήσης δεδομένων στις ρυθμίσεις που είναι διαθέσιμες μέσα από την εφαρμογή.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Εταιρίες δικτύου</string>
 </resources>

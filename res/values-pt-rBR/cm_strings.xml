@@ -19,6 +19,19 @@
   <string name="show_dev_on_cm">Você ativou as configurações de desenvolvimento!</string>
   <string name="show_dev_already_cm">Não é preciso, você já ativou as configurações de desenvolvimento.</string>
   <string name="development_tools_title">Ferramentas de desenvolvimento</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_cm">
+    <item quantity="one">Você agora está a <xliff:g id="step_count">%1$d </xliff:g> passo de ativar as configurações de desenvolvimento.</item>
+    <item quantity="other">Você agora está a <xliff:g id="step_count">%1$d </xliff:g> passos de ativar as configurações de desenvolvimento.</item>
+  </plurals>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_cm">Você ativou as configurações de desenvolvedor!</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_cm">Não é preciso, você já ativou as configurações de desenvolvedor.</string>
+  <!-- Launch Dev Tools -->
+  <string name="development_tools_title">Ferramentas de desenvolvedor</string>
+  <!-- Development shortcut -->
+>>>>>>> 5599680aa5c84f00a0ee148186e66e2476ce6184
   <string name="development_shortcut_title">Atalho para desenvolvimento</string>
   <string name="development_shortcut_summary">Ativar atalhos de gerenciamento de aplicativo na lista de recentes</string>
   <string name="root_access">Acesso root</string>
@@ -133,6 +146,19 @@
   <string name="wifi_setting_countrycode_title">Código de região Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_summary">Especificar o código de região para Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_error">Houve um problema ao definir o código de região.</string>
+  <string name="wifi_countrycode_us">Estados Unidos</string>
+  <string name="wifi_countrycode_ca">Canadá, Taiwan</string>
+  <string name="wifi_countrycode_de">Alemanha</string>
+  <string name="wifi_countrycode_gb">Europa</string>
+  <string name="wifi_countrycode_jp">Japão, Rússia</string>
+  <string name="wifi_countrycode_au">Austrália</string>
+  <string name="wifi_countrycode_cn">China</string>
+  <string name="wifi_countrycode_kr">Coréia</string>
+  <string name="wifi_countrycode_tr">África do Sul, Turquia</string>
+  <string name="wifi_countrycode_sg">Israel, Cingapura</string>
+  <string name="wifi_countrycode_br">Brasil</string>
+  <string name="wifi_countrycode_in">Índia</string>
+  <!-- Profiles -->
   <string name="profile_menu_delete_title">Apagar</string>
   <string name="profile_action_none">Deixar inalterado</string>
   <string name="profile_action_system">Padrão do sistema</string>
@@ -495,6 +521,10 @@
   <string name="saturation_str">Saturação: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Contraste: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensidade: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Padrão</string>
+  <string name="screen_color_vivid">Vívido</string>
+  <string name="screen_color_custom">Personalizado</string>
+  <!-- LiveDisplay -->
   <string name="live_display_summary">Otimiza sua tela com base na hora do dia e condições do ambiente para melhorar a legibilidade e reduzir o cansaço visual</string>
   <string name="live_display_mode">Modo de exibição</string>
   <string name="live_display_color_temperature_title">Temperatura da cor</string>
@@ -837,4 +867,37 @@
   <string name="restrict_app_cellular_title">Impedir que o app o use a rede de celular</string>
   <string name="restrict_app_cellular_summary">Impedir que este app usar a conexão de dados celular</string>
   <string name="privacy_guard_internet_category">Internet</string>
+  <string name="restrict_app_cellular_title">Impedir que o aplicativo use a rede de celular</string>
+  <string name="restrict_app_cellular_summary">Impedir que este aplicativo use a conexão de dados móveis</string>
+  <string name="privacy_guard_internet_category">Internet</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Clima</string>
+  <string name="weather_settings_no_services_prompt">Não há provedor de previsão do tempo instalado</string>
+  <string name="weather_settings_button">Configurações do provedor</string>
+  <string name="weather_settings_activity_not_found">Não foi possível iniciar o menu de configurações deste provedor</string>
+  <string name="weather_settings_add_weather_provider">Adicionar provedor de previsão do tempo</string>
+  <string name="weather_settings_general_settings_title">Geral</string>
+  <string name="weather_settings_providers_title">Provedores</string>
+  <string name="weather_settings_temp_units_title">Unidade de temperatura</string>
+  <string name="weather_settings_temp_celsius">Celsius</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+  <string name="weather_settings_keyword">tempo</string>
+  <string name="background_data_access">Acesso aos dados em segundo plano</string>
+  <string name="allow_background_both">Através dos dados móveis e Wi\u2011Fi</string>
+  <string name="allow_background_wlan">Apenas através de Wi\u2011Fi</string>
+  <string name="allow_background_none">Sem acesso</string>
+  <string name="mobile_data_alert">Alerta de dados móveis</string>
+  <string name="mobile_data_alert_summary">Notificar quando o app usar uma quantidade significativa de dados</string>
+  <string name="data_usage_menu_enable_data_alerts">Ativar alertas de uso de dados</string>
+  <string name="data_usage_menu_disable_data_alerts">Desativar os alertas de uso de dados</string>
+  <string name="data_usage_menu_reset_stats">Redefinir as estatísticas de dados</string>
+  <string name="reset_data_stats_msg">Isto irá apagar todas as informações de rastreamento de dados</string>
+  <string name="reset_stats_confirm">Confirmar</string>
+  <string name="restrict_cellular_access_title">Restringir o acesso de dados móveis</string>
+  <string name="restrict_cellular_access_summary">Desativar o acesso de dados em redes móveis</string>
+  <string name="restrict_cellular_access_dialog_title">Restringir o acesso de dados móveis?</string>
+  <string name="restrict_cellular_access_dialog_summary">Este recurso pode fazer com que um app que dependa de acesso à rede deixe de responder quando só estiverem disponíveis redes móveis.\n\nVocê pode encontrar ferramentas mais apropriadas para o controle de dados nas configurações disponíveis no app.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Operadores de rede</string>
+>>>>>>> 5599680aa5c84f00a0ee148186e66e2476ce6184
 </resources>

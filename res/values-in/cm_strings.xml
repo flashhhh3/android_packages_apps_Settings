@@ -126,12 +126,33 @@
   <string name="toggleBluetooth">Bluetooth</string>
   <string name="toggleGPS">GPS</string>
   <string name="toggleData">Sambungan data</string>
-  <string name="toggleSync">Otomatis sinkron data</string>
-  <string name="toggle2g3g4g">Pilihan jenis jaringan</string>
-  <string name="toggleNfc">NFC</string>
   <string name="wifi_setting_countrycode_title">Kode negara Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_summary">Tentukan kode negara untuk Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_error">Ada masalah saat mengatur kode negara.</string>
+  <string name="toggleSync">Otomatis sinkronkan data</string>
+  <string name="toggle2g3g4g">Jenis jaringan pilihan</string>
+  <string name="toggle2g3g4g_msim">Jenis jaringan pilihan (%1$s)</string>
+  <string name="toggleNfc">NFC</string>
+  <!-- Wi-Fi region code -->
+  <string name="wifi_setting_countrycode_title">Kode wilayah Wi\u2011Fi</string>
+  <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
+  <string name="wifi_setting_countrycode_summary">Tentukan kode wilayah untuk Wi\u2011Fi</string>
+  <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_setting_countrycode_error">Ada masalah saat mengatur kode wilayah.</string>
+  <string name="wifi_countrycode_us">Amerika</string>
+  <string name="wifi_countrycode_ca">Kanada, Taiwan</string>
+  <string name="wifi_countrycode_de">Jerman</string>
+  <string name="wifi_countrycode_gb">Eropa</string>
+  <string name="wifi_countrycode_jp">Jepang, Rusia</string>
+  <string name="wifi_countrycode_au">Australia</string>
+  <string name="wifi_countrycode_cn">Tiongkok</string>
+  <string name="wifi_countrycode_kr">Korea</string>
+  <string name="wifi_countrycode_tr">Afrika Selatan, Turki</string>
+  <string name="wifi_countrycode_sg">Israel, Singapura</string>
+  <string name="wifi_countrycode_br">Brasil</string>
+  <string name="wifi_countrycode_in">India</string>
+  <!-- Profiles -->
+>>>>>>> 5599680aa5c84f00a0ee148186e66e2476ce6184
   <string name="profile_menu_delete_title">Hapus</string>
   <string name="profile_action_none">Tinggalkan tanpa perubahan</string>
   <string name="profile_action_system">Standar sistem</string>
@@ -205,7 +226,18 @@
   <string name="notification_light_default_value">Standar</string>
   <string name="notification_light_missed_call_title">Panggilan tak terjawab</string>
   <string name="notification_light_voicemail_title">Pesan suara</string>
-  <string name="enable_adb_cm">Android debugging</string>
+  <string name="notification_light_screen_on">Lampu dengan layar yang menyala</string>
+  <string name="notification_light_zen_mode">Lampu dalam modus Do Not Disturb</string>
+  <string name="notification_light_use_multiple_leds">Diode Pancaran Cahaya Ganda</string>
+  <string name="keywords_lights_brightness_level">redupkan kecemerlangan diode pancaran cahaya</string>
+  <string name="notification_light_automagic">Memilih warna secara otomatis</string>
+  <!-- Lights settings, LED notification -->
+  <string name="led_notification_title">Pengaturan cahaya</string>
+  <string name="led_notification_text">Lampu LED yang diaktifkan oleh pengaturan</string>
+  <string name="notification_light_no_apps_summary">Untuk menambahkan kontrol pada setiap aplikasi, aktifkan \'%1$s\' dan tekan \'\u002b\' pada bilah menu</string>
+  <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
+  <string name="enable_adb_cm">Perbaikan galat fungsi Android</string>
+  <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
   <string name="enable_adb_summary_cm">Aktifkan antarmuka Android Debug Bridge (adb)</string>
   <string name="adb_over_network">ADB melalui jaringan</string>
   <string name="adb_over_network_summary">Aktifkan TCP/IP debug melalui antarmuka jaringan (Wi-Fi, jaringan USB). Pengaturan ini direset pada saat dinyalakan ulang</string>
@@ -431,6 +463,11 @@
   <string name="contrast_str">Kontras: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensitas: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
   <string name="live_display_summary">Optimalkan layar berdasarkan waktu dan kondisi ambien untuk meningkatkan keterbacaan dan mengurangi kelelahan mata</string>
+  <string name="screen_color_standard">Standar</string>
+  <string name="screen_color_vivid">Jelas</string>
+  <string name="screen_color_custom">Khusus</string>
+  <!-- LiveDisplay -->
+  <string name="live_display_summary">Optimalkan layar berdasarkan waktu dan kondisi ruangan untuk meningkatkan keterbacaan dan mengurangi kelelahan mata</string>
   <string name="live_display_mode">Modus tampilan</string>
   <string name="live_display_color_temperature_title">Suhu warna</string>
   <string name="live_display_color_temperature_summary">Pagi: <xliff:g id="day_temperature">%1$d</xliff:g>K  Malam: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
@@ -686,4 +723,39 @@
   <string name="battery_info_status_charging_dock_ac">Mengisi dengan AC dudukan</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">Mengisi melalui USB dudukan</string>
+  <string name="battery_info_status_charging_dock_usb">Mengisi melalui dok USB</string>
+  <string name="restrict_app_wlan_title">Nonaktifkan penggunaan Wi\u2011Fi oleh aplikasi</string>
+  <string name="restrict_app_wlan_summary">Cegah aplikasi menggunakan koneksi data Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">Nonaktifkan penggunaan data seluler oleh aplikasi</string>
+  <string name="restrict_app_cellular_summary">Cegah aplikasi menggunakan koneksi data seluler</string>
+  <string name="privacy_guard_internet_category">Internet</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Cuaca</string>
+  <string name="weather_settings_no_services_prompt">Layanan penyedia cuaca belum diinstal</string>
+  <string name="weather_settings_button">Pengaturan penyedia</string>
+  <string name="weather_settings_activity_not_found">Tidak dapat membuka menu pengaturan untuk penyedia ini</string>
+  <string name="weather_settings_add_weather_provider">Tambahkan penyedia cuaca</string>
+  <string name="weather_settings_general_settings_title">Umum</string>
+  <string name="weather_settings_providers_title">Penyedia</string>
+  <string name="weather_settings_temp_units_title">Satuan temperatur</string>
+  <string name="weather_settings_temp_celsius">Celsius</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+  <string name="weather_settings_keyword">cuaca</string>
+  <string name="background_data_access">Akses data latar belakang</string>
+  <string name="allow_background_both">Melalui data seluler &amp; Wi\u2011Fi</string>
+  <string name="allow_background_wlan">Hanya melalui Wi\u2011Fi</string>
+  <string name="allow_background_none">Tidak ada akses</string>
+  <string name="mobile_data_alert">Lansiran data seluler</string>
+  <string name="mobile_data_alert_summary">Beri tahu ketika aplikasi menggunakan data dalam jumlah besar</string>
+  <string name="data_usage_menu_enable_data_alerts">Aktifkan lansiran penggunaan data</string>
+  <string name="data_usage_menu_disable_data_alerts">Nonaktifkan lansiran penggunaan data</string>
+  <string name="data_usage_menu_reset_stats">Atur ulang statistik data</string>
+  <string name="reset_data_stats_msg">Ini akan menghapus semua informasi pelacakan dari dahulu sampai sekarang</string>
+  <string name="reset_stats_confirm">Konfirmasi</string>
+  <string name="restrict_cellular_access_title">Batasi akses data seluler</string>
+  <string name="restrict_cellular_access_summary">Nonaktifkan akses data pada jaringan seluler</string>
+  <string name="restrict_cellular_access_dialog_title">Batasi akses data seluler?</string>
+  <string name="restrict_cellular_access_dialog_summary">Fitur ini dapat menyebabkan sebuah aplikasi yang bergantung pada akses jaringan untuk berhenti bekerja apabila hanya jaringan seluler yang tersedia.\n\nAnda dapat menemukan kontrol penggunaan data yang lebih tepat dalam Pengaturan yang tersedia dalam aplikasi.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Operator jaringan</string>
 </resources>

@@ -127,6 +127,20 @@
   <string name="toggle2g3g4g">Üstünlük verilən şəbəkə növü</string>
   <string name="toggleNfc">NFC</string>
   <string name="wifi_setting_countrycode_summary">Wi\u2011Fi üçün bölgə kodu daxil edin</string>
+  <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_countrycode_us">Birləşmiş Ştatlar</string>
+  <string name="wifi_countrycode_ca">Kanada, Tayvan</string>
+  <string name="wifi_countrycode_de">Almaniya</string>
+  <string name="wifi_countrycode_gb">Avropa</string>
+  <string name="wifi_countrycode_jp">Yaponiya, Rusiya</string>
+  <string name="wifi_countrycode_au">Avstraliya</string>
+  <string name="wifi_countrycode_cn">Çin</string>
+  <string name="wifi_countrycode_kr">Koreya</string>
+  <string name="wifi_countrycode_tr">Cənubi Afrika, Türkiyə</string>
+  <string name="wifi_countrycode_sg">İsrail, Sinqapur</string>
+  <string name="wifi_countrycode_br">Braziliya</string>
+  <string name="wifi_countrycode_in">Hindistan</string>
+  <!-- Profiles -->
   <string name="profile_menu_delete_title">Sil</string>
   <string name="profile_action_none">Dəyişdirmədən tərk et</string>
   <string name="profile_action_system">İlkin sistem</string>
@@ -398,6 +412,10 @@
   <string name="saturation_str">Doydurma: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Təzad: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Gərginlik: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standart</string>
+  <string name="screen_color_vivid">Canlı</string>
+  <string name="screen_color_custom">Xüsusi</string>
+  <!-- LiveDisplay -->
   <string name="live_display_day">Gündüz</string>
   <string name="live_display_night">Gecə</string>
   <string name="ime_switcher_notify">Seçici nişanı</string>
@@ -531,4 +549,14 @@
   <string name="factory_reset_erase_stored_content_summary_forced">Cihazdakı musiqi, foto, video və digər istifadəçi verilənlərini sil. \n\n<b>Məzmun cihaz şifrələndiyinə görə qaytarıla bilməyəcək.</b></string>
   <string name="factory_reset_erase_sd_card_summary">Musiqi və fotolar daxil olmaqla SD kartdakı bütün verilənləri sil</string>
   <string name="live_lock_screen_settings_button">Tənzimləmələr</string>
+  <!-- Live lock screen settings screen, caption for when live lock screens are disabled -->
+  <!-- CM Legal -->
+  <!-- Menu label for reset the battery stats -->
+  <!-- Reset stats confirmation dialog's message -->
+  <!-- Dock battery not present message -->
+  <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging on Dock AC. -->
+  <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
+  <!-- Weather -->
+  <string name="weather_settings_general_settings_title">Ümumi</string>
+  <!-- Label for settings shortcut: carrier selection -->
 </resources>
