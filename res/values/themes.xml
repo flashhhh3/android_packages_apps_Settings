@@ -90,7 +90,12 @@
     <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings" />
 
     <style name="Theme.Settings" parent="Theme.SettingsBase">
-        <item name="@*android:preferenceStyle">@style/Preference</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
+        <item name="android:alertDialogTheme">@style/Theme.AlertDialog</item>
+        <item name="android:colorControlHighlight">@color/theme_primary</item>
+        <item name="android:colorControlNormal">@color/theme_primary</item>
         <item name="@*android:preferenceHeaderPanelStyle">@style/PreferenceHeaderPanelSinglePane</item>
         <item name="@*android:preferencePanelStyle">@style/PreferencePanelSinglePane</item>
         <item name="@*android:preferenceListStyle">@style/PreferenceHeaderListSinglePane</item>
@@ -136,6 +141,7 @@
 
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
         <item name="android:contentInsetStart">@dimen/actionbar_contentInsetStart</item>
+
     </style>
 
     <style name="Theme.ActionBar.SubSettings" parent="Theme.ActionBar">
@@ -159,6 +165,12 @@
         <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
 
         <item name="preferenceBackgroundColor">@drawable/preference_background</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorAccent">@color/theme_accent</item>
+        <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
+
     </style>
 
     <style name="Theme.CryptKeeper" parent="@android:style/Theme.Material.NoActionBar">
@@ -186,6 +198,11 @@
 
     <style name="Theme.AlertDialog" parent="@*android:style/Theme.Material.Settings.Dialog.Alert">
         <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorAccent">@color/theme_accent</item>
 
         <!-- Redefine the ActionBar style for contentInsetStart -->
         <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
