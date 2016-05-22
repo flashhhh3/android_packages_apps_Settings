@@ -230,7 +230,7 @@
 
     <style name="Theme.ConfirmDeviceCredentialsDark" parent="@android:style/Theme.Material">
         <item name="android:colorPrimary">@color/theme_primary</item>
-        <item name="android:colorPrimaryDark">@theme_primary_dark</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@color/confirm_device_credential_dark_background</item>
