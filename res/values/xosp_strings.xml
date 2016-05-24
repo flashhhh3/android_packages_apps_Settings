@@ -393,4 +393,9 @@
     <string name="doze_brightness_title">Doze brightness level</string>
     <string name="doze_brightness_summary">Brightness level of doze pulse screen (% of max allowed brightness)</string>
 
+    <!-- Headset indicator on status bar -->
+    <string name="headset_indicator">Headset indicator</string>
+    <string name="headset_indicator_summary_on">Headset indicator is now visible</string>
+    <string name="headset_indicator_summary_off">Toggle to show headset indicator when those are plugged</string>
+
 </resources>
