@@ -27,7 +27,7 @@
     <string name="xosp_settings_statusbar_cat">Personalización de la Barra de Estado</string>
     <!-- About XOSP -->
     <string name="about_xosp">Acerca de XOSP</string>
-    <string name="about_xosp_summary">@Nulo</string>
+    <string name="about_xosp_summary">@null</string>
     <string name="xosp_donate">Donar al Desarrolador</string>
     <string name="xosp_donate_summary">Te gusta la ROM? Haz una pequeña donación!</string>
     <string name="app_name">XOSP</string>

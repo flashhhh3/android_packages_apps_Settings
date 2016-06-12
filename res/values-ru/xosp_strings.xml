@@ -31,7 +31,7 @@
     <string name="xosp_settings_title">"XOSP настройки "</string>
     <!-- About XOSP -->
     <string name="about_xosp">О XOSP</string>
-    <string name="about_xosp_summary">@ноль</string>
+    <string name="about_xosp_summary">@null</string>
     <string name="xosp_donate">Пожертвовать разработчикам</string>
     <string name="xosp_donate_summary">Нравится Rom?Сделай небольшое пожертвование</string>
     <string name="app_name">"Xperia Open Source Project "</string>

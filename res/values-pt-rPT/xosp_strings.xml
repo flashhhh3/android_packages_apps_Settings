@@ -34,7 +34,7 @@
     <string name="xosp_settings_misc_cat">Miscelânea Personalizações</string>
     <!-- About XOSP -->
     <string name="about_xosp">"Sobre XOSP "</string>
-    <string name="about_xosp_summary">@nulo</string>
+    <string name="about_xosp_summary">@null</string>
     <string name="xosp_donate">Doações para o Desenvolvimento</string>
     <string name="xosp_donate_summary">Gostou da ROM? Faça uma pequena doação!</string>
     <string name="app_name">XOSP</string>
