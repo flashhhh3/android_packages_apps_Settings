@@ -45,8 +45,8 @@ import java.util.Map;
 import cyanogenmod.providers.CMSettings;
 import com.android.settings.xosp.SeekBarPreference;
 
-public class MarshSettings extends SettingsPreferenceFragment
-        implements OnPreferenceChangeListener, Indexable {
+public class BlurPersonalizations extends SettingsPreferenceFragment
+        implements OnPreferenceChangeListener {
 
     private TwoStatePreference mExpand;
     private TwoStatePreference mNotiTrans;
