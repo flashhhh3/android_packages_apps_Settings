@@ -125,7 +125,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
                     resolver, CMSettings.System.STATUSBAR_BLUR_SCALE, (Integer) newValue);
                 return true;
             } catch (NumberFormatException e) {
-                Log.e(TAG, "Could not persist screen timeout setting", e);
                 return false;
             }
         } else if (preference == mRadius) {
@@ -134,7 +133,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
                     resolver, CMSettings.System.STATUSBAR_BLUR_RADIUS, (Integer) newValue);
                 return true;
             } catch (NumberFormatException e) {
-                Log.e(TAG, "Could not persist screen timeout setting", e);
                 return false;
             }
         } else if (preference == mNotiTrans) {
