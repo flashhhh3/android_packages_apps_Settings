@@ -104,7 +104,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mRecentsSett = (TwoStatePreference) findPreference("blurred_recent_app_enabled_pref");
 
         boolean mRecentsSettint = (Settings.System.getInt(resolver,
-            Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, 1) == 1);
+                Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, 1) == 1);
         mRecentsSett.setChecked(mRecentsSettint);
         mRecentsSett.setOnPreferenceChangeListener(this);
 
@@ -158,6 +158,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         } else if (preference == mRecentsSett) {
             Settings.System.putInt(
                     resolver, Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
+            return true;
         }
         return false;
     }
