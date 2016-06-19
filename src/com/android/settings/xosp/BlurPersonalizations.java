@@ -52,6 +52,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     private TwoStatePreference mNotiTrans;
     private TwoStatePreference mHeadSett;
     private TwoStatePreference mQuickSett;
+    private TwoStatePreference mRecentsSett;
     private SeekBarPreference mScale;
     private SeekBarPreference mRadius;
 
@@ -62,7 +63,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mExpand = (TwoStatePreference) findPreference("hook_system_ui_blurred_status_bar_expanded_enabled_pref");
+        mExpand = (TwoStatePreference) findPreference("blurred_status_bar_expanded_enabled_pref");
 
         boolean mExpandint = (Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 1) == 1);
@@ -79,26 +80,33 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mRadius.setValue(CMSettings.System.getInt(resolver, CMSettings.System.STATUSBAR_BLUR_RADIUS, 5));
         mRadius.setOnPreferenceChangeListener(this);
 
-        mNotiTrans = (TwoStatePreference) findPreference("hook_system_ui_translucent_notifications_pref");
+        mNotiTrans = (TwoStatePreference) findPreference("translucent_notifications_pref");
 
         boolean mNotiTransint = (Settings.System.getInt(resolver,
                 Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 1) == 1);
         mNotiTrans.setChecked(mNotiTransint);
         mNotiTrans.setOnPreferenceChangeListener(this);
 
-        mHeadSett = (TwoStatePreference) findPreference("hook_system_ui_translucent_header_pref");
+        mHeadSett = (TwoStatePreference) findPreference("translucent_header_pref");
 
         boolean mHeadSettint = (Settings.System.getInt(resolver,
                 Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 1) == 1);
         mHeadSett.setChecked(mHeadSettint);
         mHeadSett.setOnPreferenceChangeListener(this);
 
-        mQuickSett = (TwoStatePreference) findPreference("hook_system_ui_translucent_quick_settings_pref");
+        mQuickSett = (TwoStatePreference) findPreference("translucent_quick_settings_pref");
 
         boolean mQuickSettint = (Settings.System.getInt(resolver,
                 Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 1) == 1);
         mQuickSett.setChecked(mQuickSettint);
         mQuickSett.setOnPreferenceChangeListener(this);
+
+        mRecentsSett = (TwoStatePreference) findPreference("blurred_recent_app_enabled_pref");
+
+        boolean mRecentsSettint = (Settings.System.getInt(resolver,
+            Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, 1) == 1);
+        mRecentsSett.setChecked(mRecentsSettint);
+        mRecentsSett.setOnPreferenceChangeListener(this);
 
     }
 
@@ -147,6 +155,9 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             Settings.System.putInt(
                     resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
             return true;
+        } else if (preference == mRecentsSett) {
+            Settings.System.putInt(
+                    resolver, Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
         }
         return false;
     }
