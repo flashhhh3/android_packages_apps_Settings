@@ -21,7 +21,7 @@
 
     <Preference
         style="?android:preferenceInformationStyle"
-        android:title="@blur_cat_notice"
+        android:title="@string/blur_cat_notice"
         android:summary="@string/blur_cat_notice_summary"
         android:selectable="false" />
 

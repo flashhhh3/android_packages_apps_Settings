@@ -420,6 +420,6 @@
     <string name="blurred_radius_summary">Amount of blur</string>
 
     <string name="blur_cat_notice">Notice</string>
-    <string name="blurred_cat_notice_summary">In order for a change to take effect do not forget to Restart everytime the SystemUI!! Or else you will no notice the difference!</string>
+    <string name="blur_cat_notice_summary">In order for a change to take effect do not forget to Restart everytime the SystemUI!! Or else you will no notice the difference!</string>
 
 </resources>
