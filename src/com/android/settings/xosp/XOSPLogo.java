@@ -16,34 +16,38 @@
 
 package com.android.settings.xosp;
 
-import android.os.Bundle;
-import android.graphics.drawable.AnimationDrawable;
-import android.widget.ImageView;
-import android.view.View;
-import android.preference.Preference;
+import android.content.Context;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
-import com.android.settings.SettingsPreferenceFragment;
+import android.preference.Preference;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ImageView;
 
-import com.android.settings.R;
+import com.android.settings.R; 
 
 public class XOSPLogo extends SettingsPreferenceFragment {
 
+	 public XOSPLogo(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+         super(context, attrs, defStyleAttr, defStyleRes);
+     }
+ 
+     public XOSPLogo(Context context, AttributeSet attrs, int defStyleAttr) {
+         super(context, attrs, defStyleAttr);
+     }
+ 
+     public XOSPLogo(Context context, AttributeSet attrs) {
+         super(context, attrs);
+     }
+
     AnimationDrawable XOSPAnimation;
 
- 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        View V = inflater.inflate(R.layout.xosp_banner, container, false);
+    protected void onBindView(View rootView) {
+        super.onBindView(rootView);
 
-        ImageView XOSPImage = (ImageView) V.findViewById(R.id.xosp_logo);
+        ImageView XOSPImage = (ImageView) rootView.findViewById(R.id.xosp_logo);
         XOSPImage.setBackgroundResource(R.drawable.xosp_logo);
         XOSPAnimation = (AnimationDrawable) XOSPImage.getBackground();
         XOSPAnimation.start();
-    }
-
-    
-    @Override
-    protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
     }
 }
