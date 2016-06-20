@@ -33,11 +33,17 @@ public class XOSPLogo extends SettingsPreferenceFragment {
  	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.layout.xosp_banner);
+        View V = inflater.inflate(R.layout.xosp_banner, container, false);
 
-        ImageView XOSPImage = (ImageView) rootView.findViewById(R.id.xosp_logo);
+        ImageView XOSPImage = (ImageView) V.findViewById(R.id.xosp_logo);
         XOSPImage.setBackgroundResource(R.drawable.xosp_logo);
         XOSPAnimation = (AnimationDrawable) XOSPImage.getBackground();
         XOSPAnimation.start();
+    }
+
+    
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.APPLICATION;
     }
 }
