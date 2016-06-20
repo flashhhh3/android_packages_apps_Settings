@@ -18,6 +18,7 @@ package com.android.settings.xosp;
 
 import android.content.Context;
 import android.graphics.drawable.Animatable;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.preference.Preference;
 import android.util.AttributeSet;
@@ -26,7 +27,7 @@ import android.widget.ImageView;
 
 import com.android.settings.R; 
 
-public class XOSPLogo extends SettingsPreferenceFragment {
+public class XOSPLogo extends Preference {
 
 	 public XOSPLogo(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
          super(context, attrs, defStyleAttr, defStyleRes);
