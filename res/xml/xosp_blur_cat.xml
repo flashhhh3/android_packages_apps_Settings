@@ -19,17 +19,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/xosp_settings_blur_cat">
 
-    <Preference
-        style="?android:preferenceInformationStyle"
-        android:title="@string/blur_cat_notice"
-        android:summary="@string/blur_cat_notice_summary"
-        android:selectable="false" />
-
     <PreferenceCategory
         android:key="blur_statusbar_cat"
         android:title="StatusBar" >
 
-      <SwitchPreference
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="blurred_status_bar_expanded_enabled_pref"
          android:title="@string/blurred_status_bar_expanded_enabled_pref"
          android:summary="@string/blurred_status_bar_expanded_enabled_pref_summary"
@@ -55,21 +49,21 @@
          settings:min="1"
          android:defaultValue="5" />
 
-      <SwitchPreference
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="translucent_notifications_pref"
          android:title="@string/translucent_notifications_pref"
          android:summary="@string/translucent_notifications_pref_summary"
          android:dependency="blurred_status_bar_expanded_enabled_pref"
          android:defaultValue="false" />
 
-      <SwitchPreference
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="translucent_header_pref"
          android:title="@string/translucent_header_pref"
          android:summary="@string/translucent_header_pref_summary"
          android:dependency="blurred_status_bar_expanded_enabled_pref"
          android:defaultValue="false" />
 
-      <SwitchPreference
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="translucent_quick_settings_pref"
          android:title="@string/translucent_quick_settings_pref"
          android:summary="@string/translucent_quick_settings_pref_summary"
@@ -81,7 +75,7 @@
         android:key="blur_recents_cat"
         android:title="Recents" >
 
-      <SwitchPreference
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="blurred_recent_app_enabled_pref"
          android:title="@string/blurred_recent_app_enabled_pref"
          android:summary="@string/blurred_recent_app_enabled_pref_summary"

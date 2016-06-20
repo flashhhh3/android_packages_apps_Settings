@@ -78,12 +78,12 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
 
         mScale = (SeekBarPreference) findPreference("statusbar_blur_scale");
         
-        mScale.setValue(CMSettings.System.getInt(resolver, CMSettings.System.STATUSBAR_BLUR_SCALE, 10));
+        mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
         mScale.setOnPreferenceChangeListener(this);
 
         mRadius = (SeekBarPreference) findPreference("statusbar_blur_radius");
         
-        mRadius.setValue(CMSettings.System.getInt(resolver, CMSettings.System.STATUSBAR_BLUR_RADIUS, 5));
+        mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
         mRadius.setOnPreferenceChangeListener(this);
 
         mNotiTrans = (TwoStatePreference) findPreference("translucent_notifications_pref");
@@ -144,21 +144,15 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
                     resolver, Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
             return true;
         } else if (preference == mScale) {
-            try {
-                CMSettings.System.putInt(
-                    resolver, CMSettings.System.STATUSBAR_BLUR_SCALE, (Integer) newValue);
-                return true;
-            } catch (NumberFormatException e) {
-                return false;
-            }
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, value);
+            return true;
         } else if (preference == mRadius) {
-            try {
-                CMSettings.System.putInt(
-                    resolver, CMSettings.System.STATUSBAR_BLUR_RADIUS, (Integer) newValue);
-                return true;
-            } catch (NumberFormatException e) {
-                return false;
-            }
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, value);
+            return true;
         } else if (preference == mNotiTrans) {
             Settings.System.putInt(
                     resolver, Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
