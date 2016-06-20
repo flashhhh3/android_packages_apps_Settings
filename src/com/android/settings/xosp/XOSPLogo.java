@@ -19,21 +19,23 @@ package com.android.settings.xosp;
 import android.os.Bundle;
 import android.graphics.drawable.AnimationDrawable;
 import android.widget.ImageView;
+import android.view.View;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.graphics.drawable.Drawable;
+import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
 
-public class XOSPLogo extends Preference {
+public class XOSPLogo extends SettingsPreferenceFragment {
 
     AnimationDrawable XOSPAnimation;
 
-    @Override
-    protected void onBindView(View rootView) {
-        super.onBindView(rootView);
-        setContentView(R.layout.xosp_banner);
+ 	@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.layout.xosp_banner);
 
-        ImageView XOSPImage = (ImageView) findViewById(R.id.xosp_logo);
+        ImageView XOSPImage = (ImageView) rootView.findViewById(R.id.xosp_logo);
         XOSPImage.setBackgroundResource(R.drawable.xosp_logo);
         XOSPAnimation = (AnimationDrawable) XOSPImage.getBackground();
         XOSPAnimation.start();
