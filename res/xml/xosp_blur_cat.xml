@@ -88,23 +88,23 @@
          android:defaultValue="false" />
 
       <com.android.settings.xosp.SeekBarPreference
-         android:key="statusbar_blur_scale"
+         android:key="recents_blur_scale"
          android:title="@string/blurred_scale"
          android:summary="@string/blurred_scale_summary"
          android:dependency="blurred_recent_app_enabled_pref"
          android:persistent="false"
          android:max="25"
          settings:min="1"
-         android:defaultValue="10" />
+         android:defaultValue="20" />
 
       <com.android.settings.xosp.SeekBarPreference
-         android:key="statusbar_blur_radius"
+         android:key="recents_blur_radius"
          android:title="@string/blurred_radius"
          android:summary="@string/blurred_radius_summary"
          android:dependency="blurred_recent_app_enabled_pref"
          android:persistent="false"
          android:max="25"
          settings:min="1"
-         android:defaultValue="5" />
+         android:defaultValue="3" />
     </PreferenceCategory>
 </PreferenceScreen>

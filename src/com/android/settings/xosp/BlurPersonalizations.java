@@ -53,8 +53,14 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     private TwoStatePreference mHeadSett;
     private TwoStatePreference mQuickSett;
     private TwoStatePreference mRecentsSett;
+    
+    //StatusBar
     private SeekBarPreference mScale;
     private SeekBarPreference mRadius;
+
+    //Recents
+    private SeekBarPreference mRecentsScale;
+    private SeekBarPreference mRecentsRadius;   
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -108,6 +114,16 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mRecentsSett.setChecked(mRecentsSettint);
         mRecentsSett.setOnPreferenceChangeListener(this);
 
+        mRecentsScale = (SeekBarPreference) findPreference("recents_blur_scale");
+        
+        mRecentsScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_RECENTS_PREFERENCE_KEY, 20));
+        mRecentsScale.setOnPreferenceChangeListener(this);
+
+        mRecentsRadius = (SeekBarPreference) findPreference("recents_blur_radius");
+        
+        mRecentsRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_RECENTS_PREFERENCE_KEY, 3));
+        mRecentsRadius.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -158,6 +174,16 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         } else if (preference == mRecentsSett) {
             Settings.System.putInt(
                     resolver, Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
+            return true;
+        } else if (preference == mRecentsScale) {
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.BLUR_SCALE_RECENTS_PREFERENCE_KEY, value);
+            return true;
+        } else if (preference == mRecentsRadius) {
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.BLUR_RADIUS_RECENTS_PREFERENCE_KEY, value);
             return true;
         }
         return false;
