@@ -31,6 +31,7 @@ public class XOSPLogo extends Preference {
     @Override
     protected void onBindView(View rootView) {
         super.onBindView(rootView);
+        setContentView(R.layout.xosp_banner);
 
         ImageView XOSPImage = (ImageView) findViewById(R.id.xosp_logo);
         XOSPImage.setBackgroundResource(R.drawable.xosp_logo);
