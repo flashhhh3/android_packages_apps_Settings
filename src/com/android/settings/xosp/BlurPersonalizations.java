@@ -22,8 +22,9 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.ListPreference;
-import android.preference.TwoStatePreference;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
+import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -70,29 +71,29 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mExpand = (SwitchPreference) prefSet.findPreference(STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY);
+        mExpand = (SwitchPreference) prefSet.findPreference("blurred_status_bar_expanded_enabled_pref");
         mExpand.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1));
 
-        mScale = (SeekBarPreference) findPreference(BLUR_SCALE_PREFERENCE_KEY);
+        mScale = (SeekBarPreference) findPreference("blurred_expanded_panel_scale_pref");
         
         mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
         mScale.setOnPreferenceChangeListener(this);
 
-        mRadius = (SeekBarPreference) findPreference(BLUR_RADIUS_PREFERENCE_KEY);
+        mRadius = (SeekBarPreference) findPreference("blurred_expanded_panel_radius_pref");
         
         mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
         mRadius.setOnPreferenceChangeListener(this);
 
-        mNotiTrans = (SwitchPreference) prefSet.findPreference(TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY);
+        mNotiTrans = (SwitchPreference) prefSet.findPreference("translucent_notifications_pref");
         mNotiTrans.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 0) == 1));
 
-        mHeadSett = (SwitchPreference) prefSet.findPreference(TRANSLUCENT_HEADER_PREFERENCE_KEY);
+        mHeadSett = (SwitchPreference) prefSet.findPreference("translucent_header_pref");
         mHeadSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 0) == 1));
 
-        mQuickSett = (SwitchPreference) prefSet.findPreference(TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY);
+        mQuickSett = (SwitchPreference) prefSet.findPreference("translucent_quick_settings_pref");
         mQuickSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0) == 1));
 
