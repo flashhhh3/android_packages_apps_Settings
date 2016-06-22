@@ -35,14 +35,14 @@
          android:summary="@string/blurred_status_bar_expanded_enabled_pref_summary"
          android:defaultValue="false" />
 
-      <com.android.settings.xosp.SeekBarPreference
+      <!--<com.android.settings.xosp.SeekBarPreference
          android:key="statusbar_blur_scale"
          android:title="@string/blurred_scale"
          android:summary="@string/blurred_scale_summary"
          android:dependency="blurred_status_bar_expanded_enabled_pref"
          android:persistent="false"
          android:max="25"
-         settings:min="1"
+         settings:min="2"
          android:defaultValue="10" />
 
   	  <com.android.settings.xosp.SeekBarPreference
@@ -52,8 +52,8 @@
          android:dependency="blurred_status_bar_expanded_enabled_pref"
          android:persistent="false"
          android:max="25"
-         settings:min="1"
-         android:defaultValue="5" />
+         settings:min="2"
+         android:defaultValue="5" /> -->
 
       <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
          android:key="translucent_notifications_pref"
