@@ -23,6 +23,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.SwitchPreference;
+import android.preference.TwoStatePreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -50,7 +51,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private SwitchPreference mExpand;
-    private SeitchPreference mNotiTrans;
+    private SwitchPreference mNotiTrans;
     private SwitchPreference mHeadSett;
     private SwitchPreference mQuickSett;
     private SwitchPreference mRecentsSett;
