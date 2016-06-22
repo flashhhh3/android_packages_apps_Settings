@@ -54,7 +54,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     private SwitchPreference mNotiTrans;
     private SwitchPreference mHeadSett;
     private SwitchPreference mQuickSett;
-    private SwitchPreference mRecentsSett;
+    private TwoStatePreference mRecentsSett;
     
     //StatusBar
     private SeekBarPreference mScale;
