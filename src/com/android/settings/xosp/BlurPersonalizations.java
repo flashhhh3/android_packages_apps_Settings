@@ -63,15 +63,15 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
 
     //Recents
     private SeekBarPreference mRecentsScale;
-    private SeekBarPreference mRecentsRadius;   
+    private SeekBarPreference mRecentsRadius;
+
+    private static final String KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE = "translucent_quick_settings_pref_percentage";   
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.xosp_blur_cat);
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        private static final String KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE = "translucent_quick_settings_pref_percentage";
 
         ContentResolver resolver = getActivity().getContentResolver();
 
