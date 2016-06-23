@@ -76,15 +76,15 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mExpand.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1));
 
-        //mScale = (SeekBarPreference) findPreference("blurred_expanded_panel_scale_pref");
+        mScale = (SeekBarPreference) findPreference("blurred_expanded_panel_scale_pref");
         
-        //mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
-        //mScale.setOnPreferenceChangeListener(this);
+        mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
+        mScale.setOnPreferenceChangeListener(this);
 
-        //mRadius = (SeekBarPreference) findPreference("blurred_expanded_panel_radius_pref");
+        mRadius = (SeekBarPreference) findPreference("blurred_expanded_panel_radius_pref");
         
-        //mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
-        //mRadius.setOnPreferenceChangeListener(this);
+        mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
+        mRadius.setOnPreferenceChangeListener(this);
 
         mNotiTrans = (SwitchPreference) prefSet.findPreference("translucent_notifications_pref");
         mNotiTrans.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
@@ -130,7 +130,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        /*if (preference == mScale) {
+        if (preference == mScale) {
             int value = ((Integer)newValue).intValue();
             Settings.System.putInt(
                 resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, value);
@@ -140,7 +140,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             Settings.System.putInt(
                 resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, value);
             return true;
-        }*/ if (preference == mRecentsSett) {
+        } if (preference == mRecentsSett) {
             Settings.System.putInt(
                     resolver, Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
             return true;
