@@ -65,8 +65,8 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     private SeekBarPreference mRecentsRadius;   
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.xosp_blur_cat);
         PreferenceScreen prefSet = getPreferenceScreen();
 
