@@ -59,6 +59,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     //StatusBar
     private SeekBarPreference mScale;
     private SeekBarPreference mRadius;
+    private SeekBarPreference mQuickSettPerc;
 
     //Recents
     private SeekBarPreference mRecentsScale;
@@ -70,6 +71,8 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.xosp_blur_cat);
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        private static final String KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE = "translucent_quick_settings_pref_percentage";
+
         ContentResolver resolver = getActivity().getContentResolver();
 
         mExpand = (SwitchPreference) prefSet.findPreference("blurred_status_bar_expanded_enabled_pref");
@@ -77,12 +80,10 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
                 Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1));
 
         mScale = (SeekBarPreference) findPreference("statusbar_blur_scale");
-        
         mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
         mScale.setOnPreferenceChangeListener(this);
 
         mRadius = (SeekBarPreference) findPreference("statusbar_blur_radius");
-        
         mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
         mRadius.setOnPreferenceChangeListener(this);
 
@@ -97,6 +98,10 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mQuickSett = (SwitchPreference) prefSet.findPreference("translucent_quick_settings_pref");
         mQuickSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0) == 1));
+
+        mQuickSettPerc = (SeekBarPreference) findPreference(KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE);
+        mQuickSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, 60));
+        mQuickSettPerc.setOnPreferenceChangeListener(this);
 
         mRecentsSett = (TwoStatePreference) findPreference("blurred_recent_app_enabled_pref");
 
@@ -139,6 +144,11 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             int value = ((Integer)newValue).intValue();
             Settings.System.putInt(
                 resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, value);
+            return true;
+        } else if (preference == mQuickSettPerc) {
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, value);
             return true;
         } if (preference == mRecentsSett) {
             Settings.System.putInt(

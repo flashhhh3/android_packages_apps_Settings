@@ -70,6 +70,16 @@
          android:title="@string/translucent_quick_settings_pref"
          android:summary="@string/translucent_quick_settings_pref_summary"
          android:defaultValue="false" />
+
+      <com.android.settings.xosp.SeekBarPreference
+         android:key="translucent_quick_settings_pref_percentage"
+         android:title="@string/blurred_radius"
+         android:summary="@string/blurred_radius_summary"
+         android:dependency="translucent_quick_settings_pref"
+         android:max="100"
+         settings:min="0"
+         android:defaultValue="60" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
