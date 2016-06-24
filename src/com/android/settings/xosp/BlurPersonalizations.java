@@ -181,8 +181,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             mRadius.setEnabled(enabled); 
             mScale.setEnabled(enabled);
         }
-        mRadius.setEnabled(disabled); 
-        mScale.setEnabled(disabled);
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
