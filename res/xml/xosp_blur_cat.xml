@@ -81,35 +81,4 @@
          android:defaultValue="60" />
 
     </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="blur_recents_cat"
-        android:title="Recents" >
-
-      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-         android:key="blurred_recent_app_enabled_pref"
-         android:title="@string/blurred_recent_app_enabled_pref"
-         android:summary="@string/blurred_recent_app_enabled_pref_summary"
-         android:defaultValue="false" />
-
-      <com.android.settings.xosp.SeekBarPreference
-         android:key="recents_blur_scale"
-         android:title="@string/blurred_scale"
-         android:summary="@string/blurred_scale_summary"
-         android:dependency="blurred_recent_app_enabled_pref"
-         android:persistent="false"
-         android:max="25"
-         settings:min="1"
-         android:defaultValue="20" />
-
-      <com.android.settings.xosp.SeekBarPreference
-         android:key="recents_blur_radius"
-         android:title="@string/blurred_radius"
-         android:summary="@string/blurred_radius_summary"
-         android:dependency="blurred_recent_app_enabled_pref"
-         android:persistent="false"
-         android:max="25"
-         settings:min="1"
-         android:defaultValue="3" />
-    </PreferenceCategory>
 </PreferenceScreen>

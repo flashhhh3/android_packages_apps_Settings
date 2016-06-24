@@ -61,10 +61,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     private SeekBarPreference mRadius;
     private SeekBarPreference mQuickSettPerc;
 
-    //Recents
-    private SeekBarPreference mRecentsScale;
-    private SeekBarPreference mRecentsRadius;
-
     private static final String KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE = "translucent_quick_settings_pref_percentage";   
 
     @Override
@@ -102,24 +98,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mQuickSettPerc = (SeekBarPreference) findPreference(KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE);
         mQuickSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, 60));
         mQuickSettPerc.setOnPreferenceChangeListener(this);
-
-        mRecentsSett = (TwoStatePreference) findPreference("blurred_recent_app_enabled_pref");
-
-        boolean mRecentsSettint = (Settings.System.getInt(resolver,
-                Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, 1) == 0);
-        mRecentsSett.setChecked(mRecentsSettint);
-        mRecentsSett.setOnPreferenceChangeListener(this);
-
-        mRecentsScale = (SeekBarPreference) findPreference("recents_blur_scale");
-        
-        mRecentsScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_RECENTS_PREFERENCE_KEY, 20));
-        mRecentsScale.setOnPreferenceChangeListener(this);
-
-        mRecentsRadius = (SeekBarPreference) findPreference("recents_blur_radius");
-        
-        mRecentsRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_RECENTS_PREFERENCE_KEY, 3));
-        mRecentsRadius.setOnPreferenceChangeListener(this);
-
     }
 
     @Override
@@ -149,20 +127,6 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             int value = ((Integer)newValue).intValue();
             Settings.System.putInt(
                 resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, value);
-            return true;
-        } if (preference == mRecentsSett) {
-            Settings.System.putInt(
-                    resolver, Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY, (((Boolean) newValue) ? 1 : 0));
-            return true;
-        } else if (preference == mRecentsScale) {
-            int value = ((Integer)newValue).intValue();
-            Settings.System.putInt(
-                resolver, Settings.System.BLUR_SCALE_RECENTS_PREFERENCE_KEY, value);
-            return true;
-        } else if (preference == mRecentsRadius) {
-            int value = ((Integer)newValue).intValue();
-            Settings.System.putInt(
-                resolver, Settings.System.BLUR_RADIUS_RECENTS_PREFERENCE_KEY, value);
             return true;
         }
         return false;
