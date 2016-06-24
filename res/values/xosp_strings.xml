@@ -414,7 +414,6 @@
 
     <string name="blur_expstatus_cat">Expanded StatusBar </string>
     <string name="blur_notifications_cat">Notifications</string>
-    <string name="blur_scale_radius_cat">Blur and Radius levels </string>
     <string name="blur_header_cat">StatusBar Header</string>
     <string name="blur_qs_cat">Quick Settings</string>
 

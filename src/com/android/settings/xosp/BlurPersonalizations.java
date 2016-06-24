@@ -160,26 +160,18 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, enabled ? 1:0);
-            mRadius.setEnabled(enabled); 
-            mScale.setEnabled(enabled);
         } else if (preference == mNotiTrans) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, enabled ? 1:0);
-            mRadius.setEnabled(enabled); 
-            mScale.setEnabled(enabled);  
         } else if (preference == mHeadSett) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, enabled ? 1:0);
-            mRadius.setEnabled(enabled); 
-            mScale.setEnabled(enabled);          
+                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, enabled ? 1:0);       
         } else if (preference == mQuickSett) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, enabled ? 1:0); 
-            mRadius.setEnabled(enabled); 
-            mScale.setEnabled(enabled);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
