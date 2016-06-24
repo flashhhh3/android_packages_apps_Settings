@@ -50,18 +50,19 @@ import com.android.settings.xosp.SeekBarPreference;
 public class BlurPersonalizations extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
+    //Switch Preferences
     private SwitchPreference mExpand;
     private SwitchPreference mNotiTrans;
     private SwitchPreference mHeadSett;
     private SwitchPreference mQuickSett;
     private TwoStatePreference mRecentsSett;
     
-    //StatusBar
+    //Transluency,Radius and Scale
     private SeekBarPreference mScale;
     private SeekBarPreference mRadius;
     private SeekBarPreference mQuickSettPerc;
-
-    private static final String KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE = "translucent_quick_settings_pref_percentage";   
+    private SeekBarPreference mHeaderSettPerc;
+    private SeekBarPreference mNotSettPerc;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -95,10 +96,21 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         mQuickSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0) == 1));
 
-        mQuickSettPerc = (SeekBarPreference) findPreference(KEY_TRANSLUCENT_QUICK_SETTINGS_PREF_PERCENTAGE);
+        mQuickSettPerc = (SeekBarPreference) findPreference("quick_settings_transluency");
         mQuickSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, 60));
         mQuickSettPerc.setOnPreferenceChangeListener(this);
+
+        mHeaderSettPerc = (SeekBarPreference) findPreference("header_transluency");
+        mHeaderSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_HEADER_PRECENTAGE_PREFERENCE_KEY, 60));
+        mHeaderSettPerc.setOnPreferenceChangeListener(this);
+
+        mNotSettPerc = (SeekBarPreference) findPreference("notifications_transluency");
+        mNotSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_NOTIFICATIONS_PRECENTAGE_PREFERENCE_KEY, 60));
+        mNotSettPerc.setOnPreferenceChangeListener(this);
+
     }
+
+
 
     @Override
     protected int getMetricsCategory() {
@@ -128,6 +140,16 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
             Settings.System.putInt(
                 resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, value);
             return true;
+        } else if (preference == mHeaderSettPerc) {
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.TRANSLUCENT_HEADER_PRECENTAGE_PREFERENCE_KEY, value);
+            return true;
+        } else if (preference == mNotSettPerc) {
+            int value = ((Integer)newValue).intValue();
+            Settings.System.putInt(
+                resolver, Settings.System.TRANSLUCENT_NOTIFICATIONS_PRECENTAGE_PREFERENCE_KEY, value);
+            return true;
         }
         return false;
     }
@@ -137,20 +159,30 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
         if  (preference == mExpand) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, enabled ? 1:0);  
+                    Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, enabled ? 1:0);
+            mRadius.setEnabled(enabled); 
+            mScale.setEnabled(enabled);
         } else if (preference == mNotiTrans) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, enabled ? 1:0);  
+                    Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, enabled ? 1:0);
+            mRadius.setEnabled(enabled); 
+            mScale.setEnabled(enabled);  
         } else if (preference == mHeadSett) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, enabled ? 1:0);          
+                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, enabled ? 1:0);
+            mRadius.setEnabled(enabled); 
+            mScale.setEnabled(enabled);          
         } else if (preference == mQuickSett) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, enabled ? 1:0); 
+            mRadius.setEnabled(enabled); 
+            mScale.setEnabled(enabled);
         }
+        mRadius.setEnabled(disabled); 
+        mScale.setEnabled(disabled);
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
