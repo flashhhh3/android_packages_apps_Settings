@@ -41,14 +41,35 @@ public class XOSPLogo extends Preference {
          super(context, attrs);
      }
 
-    AnimationDrawable XOSPAnimation;
+    AnimationDrawable XOSPAnimationPart1;
+    AnimationDrawable XOSPAnimationPart2;
+    AnimationDrawable XOSPAnimationPart3;
 
     protected void onBindView(View rootView) {
         super.onBindView(rootView);
 
-        ImageView XOSPImage = (ImageView) rootView.findViewById(R.id.xosp_logo);
-        XOSPImage.setBackgroundResource(R.drawable.xosp_logo);
-        XOSPAnimation = (AnimationDrawable) XOSPImage.getBackground();
-        XOSPAnimation.start();
+        ImageView XOSPImagePart1 = (ImageView) rootView.findViewById(R.id.xosp_logo);
+        ImageView XOSPImagePart2 = (ImageView) rootView.findViewById(R.id.xosp_logo);
+        ImageView XOSPImagePart3 = (ImageView) rootView.findViewById(R.is.xosp_logo);
+        XOSPImagePart1.setBackgroundResource(R.drawable.xosp_logo_part1);
+        XOSPImagePart2.setBackgroundResource(R.drawable.xosp_logo_part2);
+        XOSPImagePart3.setBackgroundResource(R.drawable.xosp_logo_part3);
+        while(true){
+            XOSPImagePart1.stop();
+            XOSPImagePart2.stop();
+            XOSPImagePart3.stop();
+            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart2.isRunning()==false){
+                XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
+                XOSPAnimationPart1.start();
+            }
+            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPar2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
+                XOSPAnimationPart2 = (AnimationDrawable) XOSPImagePart2.getBackground();
+                XOSPAnimationPart2.start();
+            }
+            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
+                XOSPAnimationPart3 = (AnimationDrawable) XOSPImagePart3.getBackground();
+                XOSPAnimationPart3.start();
+            }
+        }
     }
 }

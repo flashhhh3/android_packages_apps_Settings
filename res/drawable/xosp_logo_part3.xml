@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The Xperia Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/xosp_00101" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00102" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00103" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00104" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00105" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00106" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00107" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00108" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00109" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00110" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00111" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00112" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00113" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00114" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00115" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00116" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00117" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00118" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00119" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00120" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00121" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00122" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00123" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00124" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00125" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00126" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00127" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00128" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00129" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00130" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00131" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00132" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00133" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00134" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00135" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00136" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00137" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00138" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00139" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00140" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00141" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00142" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00143" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00144" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00145" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00146" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00147" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00148" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00149" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00150" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00151" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00152" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00153" android:duration="50" />
+    <item android:drawable="@drawable/xosp_00154" android:duration="50" />
+</animation-list>
