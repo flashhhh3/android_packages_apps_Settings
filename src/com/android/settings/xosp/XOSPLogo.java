@@ -50,19 +50,19 @@ public class XOSPLogo extends Preference {
 
         ImageView XOSPImagePart1 = (ImageView) rootView.findViewById(R.id.xosp_logo);
         ImageView XOSPImagePart2 = (ImageView) rootView.findViewById(R.id.xosp_logo);
-        ImageView XOSPImagePart3 = (ImageView) rootView.findViewById(R.is.xosp_logo);
+        ImageView XOSPImagePart3 = (ImageView) rootView.findViewById(R.id.xosp_logo);
         XOSPImagePart1.setBackgroundResource(R.drawable.xosp_logo_part1);
         XOSPImagePart2.setBackgroundResource(R.drawable.xosp_logo_part2);
         XOSPImagePart3.setBackgroundResource(R.drawable.xosp_logo_part3);
         while(true){
-            XOSPImagePart1.stop();
-            XOSPImagePart2.stop();
-            XOSPImagePart3.stop();
+            XOSPAnimationPart1.stop();
+            XOSPAnimationPart2.stop();
+            XOSPAnimationPart3.stop();
             if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart2.isRunning()==false){
                 XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
                 XOSPAnimationPart1.start();
             }
-            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPar2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
+            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
                 XOSPAnimationPart2 = (AnimationDrawable) XOSPImagePart2.getBackground();
                 XOSPAnimationPart2.start();
             }
