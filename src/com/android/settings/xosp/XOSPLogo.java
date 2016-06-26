@@ -58,18 +58,12 @@ public class XOSPLogo extends Preference {
             //XOSPAnimationPart1.stop();
             //XOSPAnimationPart2.stop();
             //XOSPAnimationPart3.stop();
-            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart2.isRunning()==false){
                 XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
                 XOSPAnimationPart1.start();
-            }
-            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
                 XOSPAnimationPart2 = (AnimationDrawable) XOSPImagePart2.getBackground();
                 XOSPAnimationPart2.start();
-            }
-            if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart3.isRunning()==false){
                 XOSPAnimationPart3 = (AnimationDrawable) XOSPImagePart3.getBackground();
                 XOSPAnimationPart3.start();
-            }
         }
     }
 }
