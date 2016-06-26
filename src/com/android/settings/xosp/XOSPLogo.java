@@ -55,9 +55,9 @@ public class XOSPLogo extends Preference {
         XOSPImagePart2.setBackgroundResource(R.drawable.xosp_logo_part2);
         XOSPImagePart3.setBackgroundResource(R.drawable.xosp_logo_part3);
         while(true){
-            XOSPAnimationPart1.stop();
-            XOSPAnimationPart2.stop();
-            XOSPAnimationPart3.stop();
+            //XOSPAnimationPart1.stop();
+            //XOSPAnimationPart2.stop();
+            //XOSPAnimationPart3.stop();
             if(XOSPAnimationPart1.isRunning()==false && XOSPAnimationPart2.isRunning()==false && XOSPAnimationPart2.isRunning()==false){
                 XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
                 XOSPAnimationPart1.start();
