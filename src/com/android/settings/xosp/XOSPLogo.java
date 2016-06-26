@@ -54,15 +54,15 @@ public class XOSPLogo extends Preference {
         XOSPImagePart1.setBackgroundResource(R.drawable.xosp_logo_part1);
         XOSPImagePart2.setBackgroundResource(R.drawable.xosp_logo_part2);
         XOSPImagePart3.setBackgroundResource(R.drawable.xosp_logo_part3);
+        XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
+        XOSPAnimationPart2 = (AnimationDrawable) XOSPImagePart2.getBackground();
+        XOSPAnimationPart3 = (AnimationDrawable) XOSPImagePart3.getBackground();
         while(true){
             //XOSPAnimationPart1.stop();
             //XOSPAnimationPart2.stop();
             //XOSPAnimationPart3.stop();
-                XOSPAnimationPart1 = (AnimationDrawable) XOSPImagePart1.getBackground();
                 XOSPAnimationPart1.start();
-                XOSPAnimationPart2 = (AnimationDrawable) XOSPImagePart2.getBackground();
                 XOSPAnimationPart2.start();
-                XOSPAnimationPart3 = (AnimationDrawable) XOSPImagePart3.getBackground();
                 XOSPAnimationPart3.start();
         }
     }
