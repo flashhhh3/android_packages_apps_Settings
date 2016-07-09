@@ -93,6 +93,9 @@
     <!-- Xiaomi Devices -->
     <string name="device_xiaomi_red">Xiaomi Redmi 1S</string>
     <string name="device_xiaomi_red_summary">armani \nMaintainer - Nitinkumar Chobhe</string>
+    
+    <string name="device_xiaomi_red_2">Xiaomi Redmi 2</string>
+    <string name="device_xiaomi_red_2_summary">wt88047 \nMaintainer - Arpit Deshpande</string>
 
     <!-- YU Devices -->
     <string name="device_yu_lettuce">Yu Yuphoria</string>
